@@ -1,3 +1,1 @@
-# Hello World from Vue and Revize
-
--Main Page [main page](/mainpage/)
+# Revize Checklist and HTML Helper

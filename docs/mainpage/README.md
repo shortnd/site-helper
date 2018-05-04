@@ -1,10 +1,9 @@
 ---
 sidebar: auto
-scrollSpy: auto
 ---
 # Main / Home Page
 
-### Over All Layout For Main
+## Over All Layout For Main
 
 ```html
 <header> <!--- For Top bar, Logo, Nav and Search -->
@@ -79,6 +78,22 @@ scrollSpy: auto
     </ul>
   </nav>
 </header>
+```
+
+### Logo
+
+```html
+<div id="logo">
+  <a href="./">
+    <img class="logo-image" src="'<!-- Insert URL HERE -->'" alt="">
+  </a>
+</div>
+```
+
+Make sure to position the Logo absolute
+
+```css
+#logo {position: absolute;}
 ```
 
 ### Top Bar
