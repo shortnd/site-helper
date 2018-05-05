@@ -76,6 +76,7 @@ sidebar: auto
         <a href="#">How Do I...</a>
       </li>
     </ul>
+    <!-- /#nav -->
   </nav>
 </header>
 ```
@@ -88,6 +89,7 @@ sidebar: auto
     <img class="logo-image" src="'<!-- Insert URL HERE -->'" alt="">
   </a>
 </div>
+<!-- /#logo -->
 ```
 
 Make sure to position the Logo absolute
@@ -105,6 +107,7 @@ Make sure to position the Logo absolute
 ```
 
 ### Mobil Search and Nav
+
 ```html
 <div class="hidden-lg hidden-md">
   <div id="nav-toggle" class="fa fa-bars mobile-nav"></div>
@@ -126,6 +129,7 @@ Make sure to position the Logo absolute
     <!-- SOCIAL GOES HERE -->
   </div>
 </div>
+<!-- /.controls -->
 ```
 
 ### Search
@@ -137,7 +141,9 @@ Make sure to position the Logo absolute
     <input name="q" class="search-form-input form-control" placeholder="Enter Search Terms..." type="search" id="search-input">
     <button class="btn search-form-button">search</button>
   </form>
+  <!-- /.search-form -->
 </div>
+<!-- /#search -->
 ```
 
 ### Translate
@@ -181,6 +187,7 @@ function googleTranslateElementInit() {
 ```html
 <div id="weather">
 </div>
+<!-- /#weather -->
 ```
 
 
@@ -191,34 +198,62 @@ function googleTranslateElementInit() {
   <ul class="bxslider">
     <li style="background: url("<!-- INSERT URL TO IMAGE HERE -->")center no-repeat; background-size: cover;"></li>
   </ul>
+  <!-- /.bxslider -->
 </section>
+<!-- /#slider -->
 ```
 
 ## Quicklinks and Owl Slider
 
+Depends on website if its an owl slider of not.
+
 ```html
 <section class="qlinks-wrap">
-  <div>
     <div class="qlinks">
-      <a href="#" classs"qlinks__item">
-        <img src="#" alt"">
+      <a href="#" class="qlinks-item">
+        <img src="#" alt="">
         <span>Text here</span>
       </a>
-      <a href="#" classs"qlinks__item">
-        <img src="#" alt"">
+      <!-- /.qlinks-item -->
+      <a href="#" class="qlinks-item">
+        <img src="#" alt="">
         <span>Text here</span>
       </a>
-      <a href="#" classs"qlinks__item">
-        <img src="#" alt"">
+      <!-- /.qlinks-item -->
+      <a href="#" class="qlinks-item">
+        <img src="#" alt="">
         <span>Text here</span>
       </a>
-      <a href="#" classs"qlinks__item">
-        <img src="#" alt"">
+      <!-- /.qlinks-item -->
+      <a href="#" class="qlinks-item">
+        <img src="#" alt="">
         <span>Text here</span>
       </a>
+      <!-- /.qlinks-item -->
     </div>
-  </div>
+    <!-- /.qlinks -->
 </section>
+<!-- /.qlinks-wrap -->
+```
+
+If its not a owlsider use css grid
+
+```css
+#qlinks-wrap {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 10px;
+  -ms-column-count: 10px;
+  -o-column-count: 10px;
+  column-gap: 10px;
+}
+/*------------------------------
+Then adjust the qlinks how you need
+------------------------------*/
 ```
 
 ## Main section
@@ -229,11 +264,15 @@ function googleTranslateElementInit() {
     <div class="news">
     <!-- NEWS GOES HERE -->
     </div>
+    <!-- /.news -->
     <div class="events">
     <!-- EVENTS GOES HERE -->
     </div>
+    <!-- /.events -->
   </div>
+  <!-- /.news-events-wrap -->
 </main>
+<!-- /#main -->
 ```
 
 ## News section
