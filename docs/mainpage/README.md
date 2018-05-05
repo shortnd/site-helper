@@ -342,3 +342,116 @@ Then adjust the qlinks how you need
   <!-- /.container -->
 </footer>
 ```
+
+Footer with a background image
+
+```html
+<footer style="background: url('<!-- INSERT URL HERE -->') center no-repeat; background-size: cover;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 copyright">
+        <p>&copy;&nbsp;&nbsp; CITY NAME HERE</p>
+      </div>
+      <!-- /.col-md-6.copyright -->
+      <div class="col-md-6 revize text-right">
+        <span class="powered-by-revize">Powered by <a href="https://revize.com" target="_blank" id="powered-by-revize">Revize</a></span> <a href="#" id="revize-login-link">Login</a>
+      </div>
+      <!-- /col-md-6.revize.text-right -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</footer>
+```
+
+### Footer Mega Menu
+
+```html
+<div class="col-md-9 footer-mega-links">
+  <div class="footer-mega-links-header">
+    <span class="footer-mega-links-header-title">Links</span>
+  </div>
+  <!-- /.footer-mega-links-header -->
+  <div class="footer-mega-links-wrap">
+    <ul id="footer-mega">
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Links</a>
+      </li>
+      <li>
+        <a href="#">Links</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Links</a>
+      </li>
+      <li>
+        <a href="#">Links</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Links</a>
+      </li>
+      <li>
+        <a href="#">Links</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Links</a>
+      </li>
+      <li>
+        <a href="#">Links</a>
+      </li>
+    </ul>
+  </div>
+  <!-- /.footer-mega-links-wrap -->
+</div>
+<!-- /.col-md-9.footer-mega-links -->
+```
+
+CSS for Mega Footer
+
+```css
+#footer-mega {
+  margin: 0;
+  -moz-column-count: 4;
+  -webkit-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 50px;
+  -moz-column-gap: 50px;
+  column-gap: 50px;
+  padding: 20px 0 0 0;
+}
+```
