@@ -11,6 +11,10 @@ module.exports = {
         link: '/freeform/'
       },
       {
+        text: 'Helpful Scripts',
+        link: '/scripts/'
+      },
+      {
         text: 'Checklist',
         link: '/checklist/'
       }
