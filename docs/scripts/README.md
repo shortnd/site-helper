@@ -127,3 +127,21 @@ if(typeof $.fn.owlCarousel !== 'undefined') {
 }
 ```
 
+## Add Icons to Nav
+
+If nav has images for each link
+
+```js
+$('#nav-icons>img').each(function() {
+    $(this).clone().prependTo($('#nav>li').eq($(this).index()).children('a'));
+});
+```
+
+```html
+<div id="nav-icons" class="hidden">
+    <img class="nav-img" src="_assets_/images/ICON YOU WANT HERE"  alt="ENTER ALT HERE"/>
+    <img class="nav-img" src="_assets_/images/ICON YOU WANT HERE" alt="ENTER ALT HERE"/>
+    <img class="nav-img" src="_assets_/images/ICON YOU WANT HERE" alt="ENTER ALT HERE" />
+</div><!--/#nav-icons.hidden-->
+```
+
