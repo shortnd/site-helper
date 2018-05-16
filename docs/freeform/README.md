@@ -8,7 +8,7 @@ sidebar: auto
 Target all styles with #freeform
 
 ```html
-<!-- BRING HEADER FROM MAIN SITE -->
+<!-- BRING HEADER FROM HOMEPAGE -->
 <section id="slider">
   <ul class="bxslider">
     <li style="background: url('<!--INSERT SLIDER URL HERE-->')center no-repeat; background-size: cover"></li>
@@ -18,7 +18,7 @@ Target all styles with #freeform
   <!-- FLYOUT -->
   <!-- ENTRY and POST SECTION -->
 </main>
-<!-- BRING FOOTER FROM MAIN SITE -->
+<!-- BRING FOOTER FROM HOMEPAGE -->
 ```
 
 ## Flyout
