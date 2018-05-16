@@ -32,7 +32,7 @@ function fillRight() {
     var pixelValue = (bodyWidth - $('.container').width() / 2 );
 
     $('INSERT TARGET HERE').css('margin-right', -pixelValue);
-    $('INSERT TARGET HERE').css('padding-right', -pixelValue);
+    $('INSERT TARGET HERE').css('padding-right', pixelValue);
 }
 fillRight();
 $window.resize(fillRight);
