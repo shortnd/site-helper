@@ -6,31 +6,22 @@ sidebar: auto
 ## Over All Layout For Main
 
 ```html
-<header> <!--- For Top bar, Logo, Nav and Search -->
-  <section>
-   <!-- TOP BAR -->
-  </section>
-  <section>
-    <!-- LOGO -->
-    <!-- NAV -->
-  </section>
+<header>
+  <!-- TOP BAR IF NEEDED -->
+  <!-- TOGGLES FOR MOBILE -->
+  <!-- ROW FOR NAVBAR AND LOGO -->
 </header>
-<section> <!-- slider -->
-  <!-- bxslider with background on <li></li> -->
-</section>
-<main> <!-- Qlinks and other sections like welcome news, events and signup -->
-  <section>
-  <!-- WELCOME SECTION -->
-  </section>
-  <section>
-  <!-- NEWS & Events SECTION -->
-  </section>
-  <section>
-  <!-- SIGNUP SECTION -->
-  </section>
+<section id="slider">
+<!-- AND OTHER ELEMENTS TO INCLUDE WITHIN OR OVER THE SLIDER -->
+</section><!--/.slider-->
+<main>
+<!-- QLINKS -->
+<!-- OTHER OPTIONAL SECTIONS -->
+<!-- WELCOME OR FREEFORM SECTION with CONTROLS -->
+<!-- SIGNUP SECTION -->
 </main>
 <footer>
-  <!-- COPYRIGHT, NAME, CONTACT US, LOGIN and REVIZE -->
+<!-- COPY RIGHT INFO AND REVIZE INFO/LOGIN -->
 </footer>
 ```
 
@@ -89,13 +80,15 @@ sidebar: auto
     <img class="logo-image" src="'<!-- Insert URL HERE -->'" alt="">
   </a>
 </div>
-<!-- /#logo -->
+
 ```
 
 Make sure to position the Logo absolute
 
-```css
+```scss
+
 #logo {position: absolute;}
+
 ```
 
 ### Top Bar
