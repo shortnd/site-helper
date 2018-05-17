@@ -28,76 +28,112 @@ sidebar: auto
 ## Header and Navbar
 
 ```html
-<header>
-  <!-- if topbar or midbar -->
-  <nav>
-    <ul id="nav">
-      <li>
-        <a href="#">Home</a>
-        <ul>
-          <li>
-            <a href="#">First Level</a>
-          </li>
-          <li>
-            <a href="#">First Level</a>
-            <ul>
-              <li>
-                <a href="#">Second Level</a>
-              </li>
-              <li>
-                <a href="#">Second Level</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">governments</a>
-      </li>
-      <li>
-        <a href="#">residents</a>
-      </li>
-      <li>
-        <a href="#">business</a>
-      </li>
-      <li>
-        <a href="#">visitors</a>
-      </li>
-      <li>
-        <a href="#">How Do I...</a>
-      </li>
-    </ul>
-    <!-- /#nav -->
-  </nav>
-</header>
+<!-- IN HEADER TAG -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 logo">
+      <a href="#" id="logo">
+        <img src="_assets_/images/logo.png" alt="navigation logo">
+      </a><!--/#logo-->
+    </div><!--/.col-md-2-->
+    <nav class="col-md-8 text-right">
+      <ul id="nav">
+        <li>
+          <a href="#">home</a>
+        </li>
+        <li>
+          <a href="#">departments</a>
+          <ul>
+            <li>
+              <a href="#">First-level dropdown</a>
+            </li>
+            <li>
+              <a href="#">First-level dropdown</a>
+              <ul>
+                <li>
+                  <span>Second-level dropdown</span>
+                </li>
+                <li>
+                  <a href="#">Second-level dropdown</a>
+                </li>
+                <li>
+                  <span>Second-level dropdown</span>
+                </li>
+                <li>
+                  <a href="#">Second-level dropdown</a>
+                </li>
+                <li>
+                  <span>Second-level dropdown</span>
+                </li>
+                <li>
+                  <a href="#">Second-level dropdown</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span>First-level dropdown</span>
+            </li>
+            <li>
+              <a href="#">First-level dropdown</a>
+            </li>
+            <li>
+              <span>First-level dropdown</span>
+            </li>
+            <li>
+              <a href="#">First-level dropdown</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">staff directory</a>
+        </li>
+        <li>
+          <a href="#">FAQ</a>
+        </li>
+        <li>
+          <a href="#">how do i?...</a>
+        </li>
+      </ul><!--/#nav-->
+    </nav><!--/.col-md-8.text-right-->
+  </div><!--/.row-->
+</div><!--/.container-->
+
+<!-- IN HEADER TAG -->
 ```
 
 ### Logo
 
 ```html
-<div id="logo">
-  <a href="./">
-    <img class="logo-image" src="'<!-- Insert URL HERE -->'" alt="">
-  </a>
-</div>
+
+<div class="col-md-2">
+  <a href="#" id="logo">
+    <img src="_assets_/images/logo.png" alt="navigations logo">
+  </a><!--/#logo-->
+</div><!--/.col-md-2-->
 
 ```
 
-Make sure to position the Logo absolute
+Make sure to position the Logo absolute example to start off with
 
 ```scss
 
-#logo {position: absolute;}
+#logo img {width: 144px; position: absolute; max-width: inital; left: 10px; top: 55px}
 
 ```
 
 ### Top Bar
 
 ```html
-<div class="top-bar-wrap">
-  <!-- INSERT WHATS NEEDED HERE -->
-</div>
+<section id="top-bar">
+  <div class="container">
+    <div class="row">
+      <!-- INSERT WHAT IS NEEDED HERE -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</section><!--/#top-bar-->
 ```
+
 
 ### Mobil Search and Nav
 
@@ -111,7 +147,7 @@ Make sure to position the Logo absolute
 ## Controls
 
 ```html
-<div class="controls">
+<section class="controls">
   <div class="controls-search">
     <!-- SEARCH SECTION -->
   </div>
@@ -121,7 +157,7 @@ Make sure to position the Logo absolute
   <div class="controls-social">
     <!-- SOCIAL GOES HERE -->
   </div>
-</div>
+</section>
 <!-- /.controls -->
 ```
 
@@ -129,36 +165,26 @@ Make sure to position the Logo absolute
 
 ```html
 <div id="search">
-  <form class="search-form" method="get" action="search.php">
-    <label for="search-input"></label>
-    <input name="q" class="search-form-input form-control" placeholder="Enter Search Terms..." type="search" id="search-input">
-    <button class="btn search-form-button">search</button>
-  </form>
-  <!-- /.search-form -->
-</div>
-<!-- /#search -->
+  <form class="search-form" method="get" actiomn="search.php">
+    <input name="q" class="form-control search-input" placeholder="Search..." type="search" id="search-input">
+    <button>Search</button>
+  </form><!--/.search-form-->
+</div><!--/#search-->
 ```
 
 ### Translate
 
-HTML for translate
-
 ```html
-<i class="fa fa-commenting"></i>
-<span id="translate">translate</span>
-<script type="text/javascript">
-// INSERT JAVASCRIPT HERE
-</script>
-```
-JS for translate
-
-```javascript
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
+<div id="google-translate" class="control hidden-sm hidden-xs">
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pagelanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+        'google-translate');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div><!--/#google-translate.control.hidden-sm.hidden-xs-->
 ```
 
 ### Social
@@ -178,22 +204,24 @@ function googleTranslateElementInit() {
 ### Weather
 
 ```html
-<div id="weather">
-</div>
-<!-- /#weather -->
+<div id="weather" class="weather">
+</div><!--/#weather.weather-->
 ```
 
 
 ## Bxslider or Slider
 
 ```html
-<section id="slider">
-  <ul class="bxslider">
-    <li style="background: url("<!-- INSERT URL TO IMAGE HERE -->")center no-repeat; background-size: cover;"></li>
-  </ul>
-  <!-- /.bxslider -->
-</section>
-<!-- /#slider -->
+<!-- IN SLIDER SECTION -->
+<ul class="bxslider">
+  <li style="background: url('<!--INSERT LOCATION OF SLIDE HERE-->') center no-repeat; background-size: cover;">
+    <div class="container slider-caption">
+      <h2>Some Text</h2>
+      <span>Some descriptive text</span>
+    </div><!--/.container-slider-caption-->
+  </li>
+</ul><!--/.bxslider-->
+<!-- IN SLIDER SECTION -->
 ```
 
 ## Quicklinks and Owl Slider
@@ -201,37 +229,26 @@ function googleTranslateElementInit() {
 Depends on website if its an owl slider of not.
 
 ```html
-<section class="qlinks-wrap">
-    <div class="qlinks">
-      <a href="#" class="qlinks-item">
-        <img src="#" alt="">
-        <span>Text here</span>
-      </a>
-      <!-- /.qlinks-item -->
-      <a href="#" class="qlinks-item">
-        <img src="#" alt="">
-        <span>Text here</span>
-      </a>
-      <!-- /.qlinks-item -->
-      <a href="#" class="qlinks-item">
-        <img src="#" alt="">
-        <span>Text here</span>
-      </a>
-      <!-- /.qlinks-item -->
-      <a href="#" class="qlinks-item">
-        <img src="#" alt="">
-        <span>Text here</span>
-      </a>
-      <!-- /.qlinks-item -->
-    </div>
-    <!-- /.qlinks -->
-</section>
-<!-- /.qlinks-wrap -->
+<!-- USUALLY IN THE MAIN SECTION -->
+<div id="quick-links-wrap">
+  <div class="container">
+    <section id="quick-links">
+      <a href="#" class="quick-links-item">
+        <img src="_assets_/images/quick-links-image-1.png" alt="">
+        <span>employment</span>
+      </a><!--/.quick-links-item-->
+      <a href="#" class="quick-links-item">
+        <img src="_assets_/images/quick-links-image-2.png" alt="">
+      </a><!--/.quick-links-item-->
+    </section><!--/#quick-links-->
+  </div><!--/.container-->
+</div><!--/#quick-links-wrap-->
+<!-- USUALLY IN THE MAIN SECTION -->
 ```
 
 If its not a owlsider use css grid
 
-```css
+```scss
 #qlinks-wrap {
   -moz-column-count: 3;
   -webkit-column-count: 3;
