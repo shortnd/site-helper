@@ -145,3 +145,21 @@ $('#nav-icons>img').each(function() {
 </div><!--/#nav-icons.hidden-->
 ```
 
+## Google Translate Issue with qlinks
+
+### Issue
+
+Google translate will try to translate both the anchor tag, and the images/span tags inside of the link, causing duplication's and strange behavior.
+
+### Solution
+
+The solution is to give an attribute of `translate="no"` and a class of `notranslate` to the anchor tag. Then you need to add the attribute of `translate="yes"` and the class of `translate` to any span tag inside of the anchor tag.
+
+### Example
+
+```html
+<a href="#" class="quick-links notranslate" translate="no">
+    <img src="_assets_/images/image.png" alt="Quick Link Image" class="notranslate" translate="no">
+    <span class="translate" translate="yes">This will be translated properly</span>
+</a>
+```
