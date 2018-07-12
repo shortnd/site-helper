@@ -163,3 +163,29 @@ The solution is to give an attribute of `translate="no"` and a class of `notrans
     <span class="translate" translate="yes">This will be translated properly</span>
 </a>
 ```
+
+## Responsive Calendar
+
+finds the height of the miniBody and adds 5px padding to the bottom to allow better responsiveness
+
+```js
+$('#calendar').load(function(){
+        var bla = undefined;
+        bla = setInterval(function(){
+            if ($('#calendar').contents().find('#loading').is(':visible')){
+                console.log('visible');
+            } else {
+                console.log('not visible');
+                function responsiveCalendarHeight(){
+                    var calendarHeight = $('#calendar').contents().find('#bodyMini').outerHeight() + 5;
+                    console.log(calendarHeight);
+                    $('#calendar').css('min-height',calendarHeight);
+                }
+                responsiveCalendarHeight();
+                $(window).resize(responsiveCalendarHeight);
+                clearInterval(bla);
+            }
+            console.log('looking...');
+        }, 20);
+    });
+```
