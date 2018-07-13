@@ -165,7 +165,7 @@ Make sure to position the Logo absolute example to start off with
 
 ```html
 <div id="search">
-  <form class="search-form" method="get" actiomn="search.php">
+  <form class="search-form" method="get" action="search.php">
     <input name="q" class="form-control search-input" placeholder="Search..." type="search" id="search-input">
     <button>Search</button>
   </form><!--/.search-form-->
