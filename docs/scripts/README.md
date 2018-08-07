@@ -9,7 +9,7 @@ sidebar: auto
 ```js
 function fillLeft() {
     var bodyWidth = $('body').outerWidth();
-    // Make sure this is targeting 
+    // Make sure this is targeting
     // the container the element is in
     var pixelValue = (bodyWidth - $('.container').width()) / 2;
 
@@ -27,7 +27,7 @@ This is the same as above but just changed to the right instead of left...
 ```js
 function fillRight() {
     var bodyWidth = $('body').outerWidth();
-    // Make sure this is targeting 
+    // Make sure this is targeting
     // the container the element is in
     var pixelValue = (bodyWidth - $('.container').width() / 2 );
 
@@ -58,7 +58,7 @@ Here is the basics of a better sticky script instead of the one in the framework
 .sticky {
     position: fixed;
     width: 100%;
-    top: 0 /* Or offset if there is a topbar */
+    top: 0
 }
 ```
 
@@ -80,7 +80,7 @@ $(function() {
     });
 ```
 
-## Translate 
+## Translate
 
 ```html
 <div id="translate" class="translate">
@@ -169,23 +169,33 @@ The solution is to give an attribute of `translate="no"` and a class of `notrans
 finds the height of the miniBody and adds 5px padding to the bottom to allow better responsiveness
 
 ```js
-$('#calendar').load(function(){
-        var bla = undefined;
-        bla = setInterval(function(){
-            if ($('#calendar').contents().find('#loading').is(':visible')){
-                console.log('visible');
-            } else {
-                console.log('not visible');
-                function responsiveCalendarHeight(){
-                    var calendarHeight = $('#calendar').contents().find('#bodyMini').outerHeight() + 5;
-                    console.log(calendarHeight);
-                    $('#calendar').css('min-height',calendarHeight);
-                }
-                responsiveCalendarHeight();
-                $(window).resize(responsiveCalendarHeight);
-                clearInterval(bla);
-            }
-            console.log('looking...');
-        }, 20);
-    });
+// start calendar resize handler
+	function resizeIframe(height) {
+		var iFrameID = document.getElementById('calendar');
+		if(iFrameID) {
+				// here you can set the height, I delete it first, then I set it again
+				iFrameID.height = "";
+				iFrameID.height = height;
+		}
+		console.log("height to: " + height);
+	}
+	var eventMethod = window.addEventListener
+	? "addEventListener"
+	: "attachEvent";
+	var eventHandler = window[eventMethod];
+	var messageEvent = eventMethod === "attachEvent"
+		? "onmessage"
+		: "message";
+	eventHandler(messageEvent, function (e) {
+
+		if( e.data && e.data[0] === "setCalHeight" )
+		{
+			if(typeof resizeIframe === 'function'){
+				resizeIframe(e.data[1]);
+			}
+
+		}
+
+	});
+	// end calendar resize handler
 ```
