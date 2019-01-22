@@ -1,11 +1,3 @@
-# Checklist
-
-<checkbox/> Check which plugins that aren't in the design and remove them from the framework, scripts.js, layout.css, and the assets folder.
-
-<checkbox/> Save all the images used in the PSD to the image folder. Make sure that photographs are saved as JPEGs. Make sure that graphics are saved as PNGs with a DPI of 144.
-
-<checkbox/> Make sure the credentials section in the scripts.js and layout.css file is filled in. Check with me (Alec or Richard) if you don't know who designed the site.
-
 ## Styles
 
 1. Styles for the homepage should go under the #main comment.
