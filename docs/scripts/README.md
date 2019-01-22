@@ -55,29 +55,29 @@ $window.resize(fillBoth);
 Here is the basics of a better sticky script instead of the one in the framework
 
 ```c
-.sticky {
-    position: fixed;
-    width: 100%;
-    top: 0
+.fixed-nav header {
+    width:100%;
+    top:0;
+    right:0;
+    position:fixed;
 }
 ```
 
 ```js
-$(function() {
-    $(window).scroll(function() {
-        if($(this).scrollTop() > ENTER_DESIRED_HEIGHT_HERE) {
-            $('TARGET TO ADD STICKY CLASS TO').addClass('sticky');
-            // Add a padding to the rest of the document to offset the results
-            // of the nav bar becoming fixed and not covering any elements
-            $('.main-wrap').css({'padding-top': 'ENTER AMOUNT TO OFFSET HERE'});
-        } else {
-            $('TARGET TO REMOVE STICKY CLASS FROM').removeClass('sticky');
-            // Remove the added padding
-            $('.main-wrap').css({'padding-top': ''});
-        }
+var nav = document.querySelector('header');
+var topOfNav = nav.offsetTop;
 
-        });
-    });
+function fixNav() {
+    if (window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+    } else {
+        document.body.classList.remove('fixed-nav');
+        document.body.style.paddingTop = 0;
+    }
+}
+
+window.addEventListener('scroll', fixNav);
 ```
 
 ## Translate
