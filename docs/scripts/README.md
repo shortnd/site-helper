@@ -164,6 +164,15 @@ The solution is to give an attribute of `translate="no"` and a class of `notrans
 </a>
 ```
 
+## Fixed Scroll
+    with smooth scrolling
+```js
+ var y = $(window).scrollTop();
+ $('html, body').animate({
+     scrollTop: y + $(window).height();
+ }, 1000);
+```
+
 ## Responsive Calendar
 
 finds the height of the miniBody and adds 5px padding to the bottom to allow better responsiveness
