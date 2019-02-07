@@ -83,18 +83,27 @@ window.addEventListener('scroll', fixNav);
 ## Translate
 
 ```html
-<div id="translate" class="translate">
-     <div id="google_translate_element"></div>
-     <script type="text/javascript">
-       function googleTranslateElementInit() {
-       new google.translate.TranslateElement({
-       pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-         }, 'google_translate_element');
-       }
-     </script>
-     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-     </script>
-   </div><!--/#translate-->
+<div id="google-translate" class="control hidden-sm hidden-xs">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google-translate');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+```
+Base styles for translate
+```css
+/*! removes styling from the translate */
+#google-translate .goog-te-gadget-simple{border:0}
+#google-translate .goog-te-menu-value{margin:0}
+#google-translate .goog-te-menu-value>*{display:none}
+#google-translate .goog-te-menu-value>span:first-of-type{display:block;font-size:0}
+/*! for adding an icon before the alternate text */
+#google-translate .goog-te-menu-value>span:first-of-type:before{content:'\f0ac';font-size:14px;font-family:FontAwesome}
+/*! for changing the text in the translate */
+#google-translate .goog-te-menu-value>span:first-of-type:after{content:'Translate';font-size:14px}
+#google-translate img{display:none}
 ```
 
 ## Owl Carousel
