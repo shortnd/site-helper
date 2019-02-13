@@ -217,3 +217,17 @@ finds the height of the miniBody and adds 5px padding to the bottom to allow bet
 	});
 	// end calendar resize handler
 ```
+
+## Slider Height Responsive
+
+responsive slider height to keep items "Above the Fold"
+
+```js
+    function heroHeight(){
+        var windowHeight = $(window).outerHeight();
+        $('.main-page #header-wrap').height(windowHeight)
+    }
+    heroHeight();
+    $window.load(heroHeight);
+    $window.resize(heroHeight);
+```
