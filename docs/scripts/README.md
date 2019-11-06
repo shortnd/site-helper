@@ -68,7 +68,7 @@ var nav = document.querySelector('header');
 var topOfNav = nav.offsetTop;
 
 function fixNav() {
-    if (window.scrollY >= topOfNav) {
+    if (window.pageOffsetY >= topOfNav) {
         document.body.style.paddingTop = nav.offsetHeight + 'px';
         document.body.classList.add('fixed-nav');
     } else {
