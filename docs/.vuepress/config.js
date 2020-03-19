@@ -17,6 +17,10 @@ module.exports = {
       {
         text: 'Checklist',
         link: '/checklist/'
+      },
+      {
+        text: 'Social Feeds',
+        link: '/social-feeds/'
       }
     ]
   }
