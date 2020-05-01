@@ -1,6 +1,6 @@
 ## Instagram Feed - Hack
 ```js
-  		if($("#instafeed").length > 0){
+  			if($("#instagramfeed").length > 0){
 			/**
 			 * @param {string} cityName
 			 * @param {number} count
@@ -11,14 +11,15 @@
 				var INSTAGRAM_URL = "https://www.instagram.com/";
 				$.get(INSTAGRAM_URL+cityName, function (data) {
 					var $result = data;
-          console.log(data);
+          // console.log(data);
           // If you need to create a container create it here
 					$('<div id="instagram"></div>').appendTo($('body'));
 					var $el = document.getElementById('instagram');
 					$el.innerHTML = $result;
-          var $scripts = [];
-          $scripts.push($el.querySelectorAll('script'));
+          var $scripts = Array.from($el.querySelectorAll('script'))
+          // $scripts.push($el.querySelectorAll('script'));
 					// var $scripts = [ ...$el.querySelectorAll('script') ];
+					// debugger;
 					var data;
 					$scripts.filter(function (el) {
 						if (el.innerHTML.match(/window\._sharedData\s?=\s?{/, '{')) {
@@ -32,11 +33,11 @@
 					var userPhotos = $userPage.graphql.user.edge_owner_to_timeline_media.edges
 					$el.innerHTML = "";
 					for(var i = 0; i < count; i++) {
-						$('<a href="'+INSTAGRAM_URL+'/p/'+userPhotos[i].node.shortcode+'" target="_blank"><img src="'+ userPhotos[i].node.display_url +'" alt="'+ userPhotos[i].node.accessibility_caption +'"></a>').appendTo($('#instafeed'));
+						$('<div class="social-feed-element"><a href="' + INSTAGRAM_URL + '/p/' + userPhotos[i].node.shortcode + '" target="_blank"><img src="' + userPhotos[i].node.display_url + '" alt="' + userPhotos[i].node.accessibility_caption + '" /></a></div>').appendTo($('#instagramfeed'));
 					}
 				});
 			}
       // Replace name of city/url of city account
-			getInstagramPhotos('cityofrgc', 6);
+			getInstagramPhotos('cityoftempletx', 8);
 		}
 ```
