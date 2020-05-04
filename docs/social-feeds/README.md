@@ -1,6 +1,6 @@
 ## Instagram Feed - Hack
 ```js
-  			if($("#instagramfeed").length > 0){
+if($("#instagramfeed").length > 0){
 			/**
 			 * @param {string} cityName
 			 * @param {number} count
@@ -16,7 +16,7 @@
 					$('<div id="instagram"></div>').appendTo($('body'));
 					var $el = document.getElementById('instagram');
 					$el.innerHTML = $result;
-          var $scripts = Array.from($el.querySelectorAll('script'))
+          var $scripts = Array.prototype.slice.call($el.querySelectorAll('script'));
           // $scripts.push($el.querySelectorAll('script'));
 					// var $scripts = [ ...$el.querySelectorAll('script') ];
 					// debugger;
